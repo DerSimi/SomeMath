@@ -36,5 +36,5 @@ if __name__ == "__main__":
     print(root(2, 1, 10, 100))  # square root of 100 is 10
     print(root(3, 1, 10, 27))  # third root of 27 is 3
 
-    # last but least the most beautiful square root
+    # last but not least the most beautiful square root
     print(root(2, 1, 10, 2))  # square root of 2 is approx. 1.41
