@@ -1,3 +1,6 @@
+import kotlin.math.cos
+import kotlin.math.pow
+
 class Hacktoberfest {
     //for k = 5 the method prints 1 4 9 16 25
     fun generateNumbersWithAnNaturalNumberAsSquareRoot(k: Int) : IntArray {
@@ -23,4 +26,13 @@ class Hacktoberfest {
 
     //n>k and n,k>0
     fun binomialCoefficient(n: Int, k: Int) = fact(n) / (fact(k)*(fact(n-k)))
+
+    fun cosineFixpoint(iterations: Int) = if(iterations <= 0) 0 else {
+        var ans = 0.5
+
+        for(i in 0..iterations)
+            ans = cos(ans)
+
+        ans
+    }
 }
