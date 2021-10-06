@@ -1,7 +1,7 @@
 class Hacktoberfest {
-    //for k = 5 the method prints 1 4 9 16 25 36
+    //for k = 5 the method prints 1 4 9 16 25
     fun generateNumbersWithAnNaturalNumberAsSquareRoot(k: Int) : IntArray {
-        var array = IntArray(k)
+        val array = IntArray(k)
 
         if(k <= 0) return array
 
@@ -17,4 +17,10 @@ class Hacktoberfest {
 
         return array
     }
+
+    //0! = 0; 5! = 120, .... n! = n(n-1)! k>0
+    fun fact(k: Int) : Int = if(k == 1 || k == 0) 1 else k * fact(k - 1)
+
+    //n>k and n,k>0
+    fun binomialCoefficient(n: Int, k: Int) = fact(n) / (fact(k)*(fact(n-k)))
 }
